@@ -1,0 +1,25 @@
+{
+  "name": "beatmyguess",
+  "version": "1.0.0",
+  "description": "project 2 ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpk12345/beatmyguess.git"
+  },
+  "author": "Bill/Adam/Mahesh/James/Chris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wpk12345/beatmyguess/issues"
+  },
+  "homepage": "https://github.com/wpk12345/beatmyguess#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "sequelize": "^4.27.0"
+  }
+}
