@@ -1,38 +1,35 @@
-
-/*NAVBAR*/
-.icon-img{
-	height: 48px; 
-	width: 48px;
-	margin-top: 0.5%;
-	margin-right: 1%;
-}
-.sidenav-overlay{
-	position: inherit;
-}
-
-@media only screen and (min-device-width: 440px) and (max-device-width:1020px){
-	.icon-img{
-		margin-top: 1%;
-	}
-}
-/*FIRST CONTAINER*/
-
-.dynamic-container{
-	height: 70vh;
-}
-#basic-info{
-	background-color: blue;
-}
-.options{
-	margin-top: 3%;
-}
-.option-items{
-	margin-top: 1%;
-}
-.container{
-	text-align: center;
-}
 /*MODAL*/
 .modal .modal-footer{
 	text-align: center;
+}
+/*MENU CSS*/
+.header{
+	background-image: url("bmg11.jpg");
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	height: 100vh;
+}
+nav.nav-center ul {
+    text-align: center;
+/*    color: #66fcf1;*/
+}
+nav.nav-center ul li {
+    display: inline;
+    float: none;
+}
+nav.nav-center ul li a {
+    display: inline-block;
+    color: #66fcf1;
+
+}
+nav ul a:hover{
+	color:#c5c6c7 !important;
+}
+.right{
+	float: none !important;
+}
+#bmg{
+	text-align: center;
+	margin-top: 10%;
 }

@@ -13,11 +13,8 @@
 
 <body>
 	<!-- This is the nav bar html before sign in -->
-	<div class="navbar-fixed">
-    <nav>
+    <nav class="nav-center header">
         <div class="nav-wrapper">
-        	<img src="bmglogo.png" class="icon-img">
-            <a href="#!" class="brand-logo">BeatMyGuess!</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
             	<!-- Modal Trigger -->
@@ -33,9 +30,9 @@
                 <li><a href="#">Demo</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
+            <h1 id="bmg">Beat My Guess</h1>
         </div>
     </nav>
-</div>
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
@@ -77,87 +74,12 @@
   </button>
     </div>
   </div>
-    <!-- End Navbar -->
-
-    <!-- Regular page contents -->
-    <!-- INTRO -->
-    <div class="dynamic-container">
-			<div class="container">
-				<h1 style="margin-top: 0px;">Welcome To BeatMyGuess!</h1>
-				<h3>A new and exciting guessing game!</h3>
-				<h5 style="margin-top: 2%;">You Name It, we've got it!</h5>
-				<ol class="options">
-					<li class="option-items">Compete against players from around the world!</li>
-					<li class="option-items">Or against yourself!</li>
-					<li class="option-items">Our leaderboards will show who's top dog</li>
-				</ol>
-			</div>
-      </div>
-    <!-- END INTRO -->
-    <!-- INFO -->
-		<div class="dynamic-container" id="basic-info">
-			<div class="container">
-				<h1 style="margin-top: 0px;">Bet On Anything You Want!</h1>
-				<h5>You Name It, we've got it!</h5>
-				<ol class="options">
-					<li class="option-items">Sports Betting!</li>
-					<li class="option-items">Stock Options</li>
-					<li class="option-items">The Weather!</li>
-				</ol>
-			</div>
-      </div>
-      <!-- End INFO -->
-      <!-- HOW TO PLAY -->
-      <div class="dynamic-container">
-			<div class="container">
-				<h1 style="margin-top: 0px;">How To Play!</h1>
-				<h5>Necessary Steps</h5>
-				<ol class="options">
-					<li class="option-items">To access all the features, you must sign up with us. Otherwise, you have the option to play a small demo.</li>
-					<li class="option-items">Explore our options! You can place guesses on multiple categories such as Sports, Stocks, the weather, and more!</li>
-					<li class="option-items">Level up and rack up points! The more guesses you get correct, the more points you'll get! Be careful though, if you guess wrong, you can lose points too!</li>
-					<li class="option-items">Track your stats! You will be placed on a leaderboard after 10 guesses. Stats include percentage of correct guesses, point totals, results by category, and more! </li>
-				</ol>
-				<h4>Play the demo</h4>
-				<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Demo</a>
-			</div>
-      </div>
-      <!-- END HOW TO PLAY -->
-<!-- End Page Contents -->
-
-<!-- FOOTER -->
-<footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2014 BeatMyGuess.com
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
-<!-- END FOOTER -->
-
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
     <script src="bmg.js"></script>
+    <script src="ajax.js"></script>
 </body>
 
 </html>
