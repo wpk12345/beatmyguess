@@ -1,3 +1,4 @@
+
 /*MODAL*/
 .modal .modal-footer{
 	text-align: center;
@@ -9,7 +10,11 @@
   	background-repeat: no-repeat;
   	background-size: cover;
   	height: 100vh;
+<<<<<<< HEAD
     font-family: 'Lobster', cursive;
+=======
+  	font-family: 'Lobster', cursive;
+>>>>>>> 3894adef13209bdb7c73ae1054f6f8fa9cc2f212
 }
 nav.nav-center ul {
     text-align: center;
@@ -33,4 +38,18 @@ nav ul a:hover{
 #bmg{
 	text-align: center;
 	margin-top: 10%;
+	font-size: 7.0rem;
+}
+.container{
+	text-align: center;
+	text-shadow: 2px 2px #000000;
+	color:#66fcf1;
+}
+.material-icons.left{
+	line-height: 36px;
+}
+.btn, .btn-large{
+	background-color: #0B0C10;
+	color: #66fcf1;
+	text-shadow: 0px 0px #000000;
 }
