@@ -10,7 +10,11 @@
   	background-repeat: no-repeat;
   	background-size: cover;
   	height: 100vh;
+
+    font-family: 'Lobster', cursive;
+=======
   	font-family: 'Lobster', cursive;
+
 }
 nav.nav-center ul {
     text-align: center;
