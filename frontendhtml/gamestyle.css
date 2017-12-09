@@ -14,6 +14,9 @@ body{
 	text-align: center;
 	color:#66fcf1;
 }
+#main-page-container{
+	color:black;
+}
 nav ul a{
 	color:#66fcf1;
 }
@@ -30,6 +33,7 @@ nav .brand-logo{
 }
 i.large{
 	font-size: 12rem;
+	color: black;
 }
 /*FOOTER*/
 .game,.page-footer{
@@ -38,4 +42,8 @@ i.large{
 }
 a {
 	color:#66fcf1;
+}
+.page-footer{
+	height: 45vh;
+	margin-top: 10%;
 }
