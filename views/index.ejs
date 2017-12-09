@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body id="clouds">
+
+  <div class="container">
+    <h1>Guess the Temp!</h1>
+    <fieldset>
+      <form action="/" method="post">
+        <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+        <div id="slidecontainer">
+          <input type="range" min="1" max="110" value="50" class="slider" id="myRange">
+          <p>Your Temperature Guess High:
+            <span id="High"></span>
+          </p>
+          <p>Your Temperature Guess Low:
+            <span id="Low"></span>
+          </p>
+        </div>
+        <input type="submit" class="ghost-button" value="Submit your guess">
+      </form>
+      <% if(weather !== null){ %>
+        <p>
+          <%= weather %>
+        </p>
+        <% } %>
+
+          <% if(error !== null){ %>
+            <p>
+              <%= error %>
+            </p>
+            <% } %>
+    </fieldset>
+  </div>
+  <script>
+    var slider = document.getElementById("myRange");
+    
+    var outputHigh = document.getElementById("High");
+    var outputLow = document.getElementById("Low");
+
+    outputHigh.innerHTML = slider.value;
+    outputLow.innerHTML = slider.value - 10;
+
+    slider.oninput = function () {
+      outputHigh.innerHTML = this.value;
+      outputLow.innerHTML = this.value - 10;
+    }
+  </script>
+</body>
+
+</html>
