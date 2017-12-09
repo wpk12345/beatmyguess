@@ -12,8 +12,15 @@ var bodyParser = require("body-parser");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+<<<<<<< HEAD
+change adam made
+adam change number 2
+james is awesome adam likes butt...
+chris
+=======
 // Requiring our models for syncing
 // var db = require("./models");
+>>>>>>> 375e7f14cb40096da41c1a5e7cd08cdbce48db36
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
