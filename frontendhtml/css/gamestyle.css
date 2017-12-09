@@ -43,7 +43,13 @@ i.large{
 a {
 	color:#66fcf1;
 }
+a:hover{
+	color:#c5c6c7;
+}
 .page-footer{
 	height: 45vh;
 	margin-top: 10%;
+}
+.copywr{
+	text-align: center;
 }
