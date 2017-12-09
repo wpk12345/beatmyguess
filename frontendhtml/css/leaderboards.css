@@ -1,0 +1,52 @@
+/*UNIVERSAL*/
+body{
+	font-family: 'Spectral SC', serif;
+}
+/*NAV*/
+.icon-img{
+	height: 48px; 
+	width: 48px;
+	margin-top: 0.5%;
+	margin-right: 1%;
+}
+.container{
+	text-align: center;
+	color:#66fcf1;
+}
+nav ul a{
+	color:#66fcf1;
+}
+nav ul a:hover{
+	color:#c5c6c7;
+}
+nav .brand-logo{
+	color:#66fcf1;
+}
+/*MAIN*/
+#main-page-container{
+	color:black;
+}
+/*TABLES*/
+#table-header-menu{
+	    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*FOOTER*/
+.game,.page-footer{
+	background-color: #0B0C10;
+		color:#66fcf1;
+}
+a {
+	color:#66fcf1;
+}
+a:hover{
+	color:#c5c6c7;
+}
+.page-footer{
+	height: 45vh;
+	margin-top: 10%;
+}
+.copywr{
+	text-align: center;
+}
