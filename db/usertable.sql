@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS beatmyguess;
-CREATE DATABASE beatmyguess;
-USE beatmyguess;
+DROP DATABASE IF EXISTS beatmyguess_db;
+CREATE DATABASE beatmyguess_db;
+USE beatmyguess_db;
 
 CREATE TABLE username(
   id INT NOT NULL AUTO_INCREMENT,
