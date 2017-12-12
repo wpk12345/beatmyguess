@@ -1,42 +1,24 @@
-$(document).ready(function(){
-  
-// When the page loads, grab and display all of our users for populating the leaderboard table
 
-$.get("/api/users", function(data) {
-    console.log(data);
-      if (data.length !== 0) {
-    
-        for (var i = 0; i < data.length; i++) {
-    
-          var row = $("<tr>");
-          row.addClass("user");
-    
-          row.append("<td>" + data[i].username + "</td>");
-          row.append("<td>" + data[i].win + "</td>");
-          row.append("<td>" + data[i].loss + "</td>");
-          row.append("<td>" + data[i].accuracy + "</td>");
-          $("#userHub").prepend(row);
-    
-        }
-    
-      }
-    
-    });
-     });
+// Make a get request to our api route that will return every book
+$.get("/api/all", function(data) {
+  // For each book that our server sends us back
+  for (var i = 0; i < data.length; i++) {
+    // Create a parent div to hold book data
+    var tableSection = $("<tr>");
+    // Add a class to this div: 'well'
+    // tableSection.addClass("table");
+    // Add an id to the well to mark which well it is
+    tableSection.attr("id", "user-row-" + i);
+    // Append the well to the well section
+    $("#userHub").append(tableSection);
 
-     // This function grabs users from the database and updates the view
-  //  function getUsers() {
-  //   $.get("/api/users", function(data) {
-  //     var row = $("<tr>");
-  //     row.addClass("user");
-
-  //     row.append("<td>" + data[i].username + "</td>");
-  //     row.append("<td>" + data[i].win + "</td>");
-  //     row.append("<td>" + data[i].loss + "</td>");
-  //     row.append("<td>" + data[i].accuracy + "</td>");
-  //     $("#userHub").append(row);
-  //     // currentUser = data;
-  //     console.log(data);
-  //     // initializeRows();
-  //   });
-  // }
+    // Now  we add our book data to the well we just placed on the page
+    // $("#user-row-" + i).append("<tr>" + (i + 1) + ". " + data[i].username);
+    $("#user-row-" + i).append("<td>" + data[i].username + "</td>");
+    $("#user-row-" + i).append("<td>" + data[i].win + "</td>");
+    $("#user-row-" + i).append("<td>" + data[i].loss + "</td>");
+    $("#user-row-" + i).append("<td>" + data[i].accuracy + "%</td>");
+    $("#user-row-" + i).append("</tr>");
+    
+  }
+});

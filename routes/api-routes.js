@@ -6,47 +6,31 @@
 // =============================================================
 
 // Requiring our models
-var db = require("../models");
+var User = require("../models/users.js");
 
 // Routes
 // =============================================================
 module.exports = function(app) {
 
- // GET route for getting all of the users
- app.get("/api/users/", function(req, res) {
-   var query = {};
-    db.Users.findAll({
-      where: {
-        username: req.params.username,
-        win: req.params.win,
-        loss: req.params.loss,
-        accuracy: req.params.accuracy
-      }
-
-    })
-    .then(function(dbUsers) {
-      res.json(dbUsers);
-    });
+ // Get all users
+ app.get("/api/all", function(req, res) {
+  User.findAll({}).then(function(results) {
+    res.json(results);
   });
+});
 
 
-  app.post("/api/users", function(req, res) {
-    db.Users.create(req.body).then(function(dbUsers) {
-      res.json(dbUsers);
-    });
+ // Add a user
+ app.post("/api/new", function(req, res) {
+  console.log("User Data:");
+  console.log(req.body);
+  User.create({
+    username: req.body.username,
+    password: req.body.password,
+    wins: req.body.wins,
+    losses: req.body.losses,
+    accuracy: req.body.accuracy
   });
-  //POST route for adding new users
-  // app.post("/api/users/", function(req, res) {
-  //   db.Users({
-  //     username: req.body.username,
-  //    password: req.body.password,
-  //     win: req.body.win,
-  //     loss: req.body.loss,
-  //     accuracy: req.body.accuracy
-  //   }).then(function(dbUsers) {
-  //     // We have access to the new todo as an argument inside of the callback function
-  //     res.json(dbUsers);
-  //   });
-  // });
+});
 
 };

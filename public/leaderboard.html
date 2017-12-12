@@ -23,16 +23,15 @@
                 <ul class="right hide-on-med-and-down">
                     <li>
                         <!-- Dropdown Trigger -->
-                        <a class='dropdown-trigger' href='#' data-target='dropdown1'>Make A Guess</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Your Stats</a></li>
+                        <a class='dropdown-trigger' href='http://www.espn.com/nfl/picks' data-target='dropdown1'>Expert's Picks</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/game">Your Stats</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Sign Out</a></li>
                 </ul>
                 <ul class="sidenav" id="mobile-demo">
-                    <li><a href="#">Make A Guess</a></li>
-                    <li><a href="#">Leaderboards</a></li>
-                    <li><a href="#">Your Stats</a></li>
+                    <li><a href="http://www.espn.com/nfl/picks">Expert's Picks</a></li>
+                    <li><a href="/game">Dashboard</a></li>
                     <li><a href="#">Account Settings</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Sign Out</a></li>
@@ -40,35 +39,31 @@
             </div>
         </nav>
     </div>
-    <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">Sports</a></li>
-        <li><a href="#!">Stocks</a></li>
-        <li><a href="#!">Weather</a></li>
-    </ul>
+  
     <!-- End Navbar -->
     <!-- Regular page contents -->
-    <div class="container">
-    <div id="main-page-container">
-      <h1>Leaderboard</h1>
+    
+                <div class="container">
+                    <div id="main-page-container">
+                      <h1>Leaderboard</h1>
+                
+                      <table id="tableOne">
+                          <thead>
+                        <tr>
+                          <th>User Name</th>
+                          <th>Wins</th>
+                          <th>Losses</th>
+                          <th>Win %</th>
+                        </tr>
+                        </thead>
+                        <tbody id="userHub">
 
-      <table id="userHub">
-        <tr>
-          <th>User Name</th>
-          <th>Wins</th>
-          <th>Losses</th>
-          <th>Win %</th>
-        </tr>
-        <tr>
-          <td>(User's Name</td>
-          <td>(User Win Count)</td>
-          <td>(User Loss Count)</td>
-          <td>(User Win %)</td>
-        </tr>
-       
-      </table>
 
-      
+                        </tbody>
+                       
+                      </table>
+                
+                      
       
     
     <!-- End Page Contents -->
@@ -77,9 +72,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
     <script src="js/bmg.js"></script>
-    <script src="js/leaderboard.js"></script>
-    <script src="js/user.js"></script>
-    
+    <script src="js/leaderboard.js"></script>    
 </body>
 
 </html>
