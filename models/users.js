@@ -5,8 +5,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     password: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     },
     win: {
       type: DataTypes.INTEGER,
@@ -21,14 +20,6 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: 0
     }
   });
-
-  // User.associate = function(models) {
-  //   // Associating User with Results
-  //   // When an Author is deleted, also delete any associated Posts
-  //   Author.hasMany(models.Post, {
-  //     onDelete: "cascade"
-  //   });
-  // };
 
   return Users;
 };

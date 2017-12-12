@@ -12,48 +12,41 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
- // GET route for getting all of the posts
- app.get("/api/Users/", function(req, res) {
-    db.Users.findAll({})
+ // GET route for getting all of the users
+ app.get("/api/users/", function(req, res) {
+   var query = {};
+    db.Users.findAll({
+      where: {
+        username: req.params.username,
+        win: req.params.win,
+        loss: req.params.loss,
+        accuracy: req.params.accuracy
+      }
+
+    })
     .then(function(dbUsers) {
       res.json(dbUsers);
     });
   });
 
-//   // Get rotue for retrieving a single post
-//   app.get("/api/posts/:id", function(req, res) {
-//     // Here we add an "include" property to our options in our findOne query
-//     // We set the value to an array of the models we want to include in a left outer join
-//     // In this case, just db.Author
-//     db.Post.findOne({
-//       where: {
-//         id: req.params.id
-//       },
-//       include: [db.Author]
-//     }).then(function(dbPost) {
-//       res.json(dbPost);
-//     });
-//   });
 
-//   // POST route for saving a new post
-//   app.post("/api/posts", function(req, res) {
-//     db.Post.create(req.body).then(function(dbPost) {
-//       res.json(dbPost);
-//     });
-//   });
+  app.post("/api/users", function(req, res) {
+    db.Users.create(req.body).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+  //POST route for adding new users
+  // app.post("/api/users/", function(req, res) {
+  //   db.Users({
+  //     username: req.body.username,
+  //    password: req.body.password,
+  //     win: req.body.win,
+  //     loss: req.body.loss,
+  //     accuracy: req.body.accuracy
+  //   }).then(function(dbUsers) {
+  //     // We have access to the new todo as an argument inside of the callback function
+  //     res.json(dbUsers);
+  //   });
+  // });
 
- 
-
-//   // PUT route for updating posts
-//   app.put("/api/posts", function(req, res) {
-//     db.Post.update(
-//       req.body,
-//       {
-//         where: {
-//           id: req.body.id
-//         }
-//       }).then(function(dbPost) {
-//         res.json(dbPost);
-//       });
-//   });
 };

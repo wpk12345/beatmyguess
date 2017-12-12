@@ -47,3 +47,25 @@ a {
 	height: 45vh;
 	margin-top: 10%;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 5px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#gameHub {
+	border: 5px;
+	border-color: solid black;
+	margin-top: 50px;
+}

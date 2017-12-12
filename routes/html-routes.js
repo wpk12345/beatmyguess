@@ -22,14 +22,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/game.html"));
   });
 
-//   // blog route loads blog.html
-//   app.get("/blog", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/blog.html"));
-//   });
-
-//   // authors route loads author-manager.html
-//   app.get("/authors", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/author-manager.html"));
-//   });
+   // game route loads leaderboard.html
+   app.get("/leaderboard", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/leaderboard.html"));
+  });
 
 };
