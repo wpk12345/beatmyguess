@@ -69,3 +69,9 @@ tr:nth-child(even) {
 	border-color: solid black;
 	margin-top: 50px;
 }
+
+.matchup {
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}

@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Berkshire+Swash|Bree+Serif|Dancing+Script|Dosis|Montserrat|Pacifico|Poiret+One|Satisfy|Shadows+Into+Light|Shrikhand|Slabo+27px|Spectral+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Berkshire+Swash|Bree+Serif|Dancing+Script|Dosis|Montserrat|Pacifico|Poiret+One|Satisfy|Shadows+Into+Light|Shrikhand|Slabo+27px|Spectral+SC"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/gamestyle.css">
 </head>
 
@@ -19,71 +20,106 @@
             <div class="nav-wrapper">
                 <img src="images/bmglogo.png" class="icon-img">
                 <a href="#!" class="brand-logo">BeatMyGuess!</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
                 <ul class="right hide-on-med-and-down">
                     <li>
                         <!-- Dropdown Trigger -->
-                        <a class='dropdown-trigger' href='http://www.espn.com/nfl/picks' data-target='dropdown1'>Expert's Picks</a></li>
-                    <li><a href="/leaderboard">Leaderboards</a></li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Sign Out</a></li>
+                        <a class='dropdown-trigger' href='http://www.espn.com/nfl/picks' data-target='dropdown1'>Expert's Picks</a>
+                    </li>
+                    <li>
+                        <a href="/leaderboard">Leaderboards</a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Sign Out</a>
+                    </li>
                 </ul>
                 <ul class="sidenav" id="mobile-demo">
-                    <li><a href="http://www.espn.com/nfl/picks">Expert's Picks</a></li>
-                    <li><a href="#">Leaderboards</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Sign Out</a></li>
+                    <li>
+                        <a href="http://www.espn.com/nfl/picks">Expert's Picks</a>
+                    </li>
+                    <li>
+                        <a href="#">Leaderboards</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Sign Out</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </div>
-   
+
     <!-- End Navbar -->
-	
+
 
 
 
     <!-- Regular page contents -->
     <div id="main-page-container">
-      <h1>Welcome! This is Your Dashboard.</h1>
+        <h1>Welcome! This is Your Dashboard.</h1>
 
-      <table id="userHub">
-        <tr>
-          <th>User Name</th>
-          <th>Wins</th>
-          <th>Losses</th>
-          <th>Win %</th>
-        </tr>
-        <tr>
-          <td>(User's Name</td>
-          <td>(User Win Count)</td>
-          <td>(User Loss Count)</td>
-          <td>(User Win %)</td>
-        </tr>
-       
-      </table>
+        <table id="userHub">
+            <tr>
+                <th>User Name</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Win %</th>
+            </tr>
+            <tr>
+                <td>(User's Name</td>
+                <td>(User Win Count)</td>
+                <td>(User Loss Count)</td>
+                <td>(User Win %)</td>
+            </tr>
 
-      <table id="gameHub">
-        <tr>
-          <th>This Week's Matchups</th>
-          <th>Your Pick</th>
-        </tr>
-        <tr>
-          <td>(Matchup 1)</td>
-          <td><button type="button" class="btn btn-default">(Team 1)</button><span><button type="button" class="btn btn-default">(Team 2)</button></span></td>
-        </tr>
-       
-      </table> 
- 
-    <!-- End Page Contents -->
-   
-    <!-- END FOOTER -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
-    <script src="js/bmg.js"></script>
-    <script src="js/game.js"></script>
-    
+        </table>
+
+        <table id="gameHub">
+            <tr>
+                <th>This Week's Matchups</th>
+                <th>Your Pick</th>
+            </tr>
+            <tr>
+                <td>(Matchup 1)</td>
+                <td>
+                    <button type="button" class="btn btn-default">Steelers</button>
+                    <span>
+                        <button type="button" class="btn btn-default">Patriots</button>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>(Matchup 2)</td>
+                <td>
+                        <a href="#" class="matchup" id="matchup2team1">Steelers</a>
+                        <hr>
+                        <span>
+                        <a href="#" class="matchup" id="matchup2team2">Patriots</a>
+                    </span>
+                </td>
+            </tr>
+
+        </table>
+
+        <!-- End Page Contents -->
+
+        <!-- END FOOTER -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+        <script src="js/bmg.js"></script>
+        <script src="js/game.js"></script>
+
 </body>
 
 </html>
