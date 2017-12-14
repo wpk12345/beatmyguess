@@ -9,6 +9,7 @@ $("#sub-muffin").on("click", function(event) {
     username: $("#username").val().trim(),
     password: $("#password").val().trim()
   };
+ 
 
   // Send an AJAX POST-request with jQuery
   $.post("/api/new", newUser)

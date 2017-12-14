@@ -7,37 +7,28 @@ var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
 // Creates a "User" model that matches up with DB
-var User = sequelize.define("user", {
-  username: {
-    type: Sequelize.STRING
-  },
-  password: {
-    type: Sequelize.STRING
-  },
-  win: {
-    type: Sequelize.INTEGER,
-    defaultValue: 0
-  },
-  loss: {
-    type: Sequelize.INTEGER,
-    defaultValue: 0
-  },
-  accuracy: {
-    type: Sequelize.INTEGER,
-    defaultValue: 0
+var Picks = sequelize.define("picks", {
+  pick: {
+      type: BOOLEAN,
+      allowNull: TRUE,
+      defaultValue: false
   },
   createdAt: Sequelize.DATEONLY,
   updatedAt: Sequelize.DATEONLY
 });
 
-User.associate = function(models) {
-  // Associating User with Picks
-  User.hasMany(models.Picks, {
-    onDelete: "cascade"
-  });
-};
+Picks.associate = function(models) {
+     // We're saying that a Pick should belong to a User
+    // A Pick can't be created without an User due to the foreign key constraint
+    Picks.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
+
 // Syncs with DB
-User.sync();
+Picks.sync();
 
 // Makes the Book Model available for other files (will also create a table)
-module.exports = User;
+module.exports = Picks;

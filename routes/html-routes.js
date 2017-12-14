@@ -26,5 +26,15 @@ module.exports = function(app) {
    app.get("/leaderboard", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/leaderboard.html"));
   });
+  
+   // game route loads game.html
+   app.get("/dashboard", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/dashboard.html"));
+  });
+
+   // game route loads game.html
+   app.get("/soon", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/commingsoon.html"));
+  });
 
 };

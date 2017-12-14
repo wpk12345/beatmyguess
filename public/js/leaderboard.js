@@ -21,3 +21,36 @@ $.get("/api/all", function(data) {
     
   }
 });
+
+// $("#wins-filter").on("click", function(){
+//   function sortTable(){
+//     var table,rows,switching,i,x,y, shouldSwitch;
+//     switching = true;
+//     while (switching){
+//       switching = false;
+
+//       x = rows[i].getElementsByTagName("TR");
+//       for(i = 1; i < (rows.length-1); i++){
+//         x = rows[i].getElementsByTagName("TD")[0];        
+//         y = rows[i + 1].getElementsByTagName("TD")[0];
+        
+//               if (x.innerHTML > y.innerHTML){
+//                 shouldSwitch = true;
+//                 break;
+//               } 
+//       }
+//     if (shouldSwitch){
+//       rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
+//       switching = true;
+//     }
+//   }
+//   }
+// });
+
+$("#losses-filter").on("click", function(){
+  
+});
+
+$("#accuracy-filter").on("click", function(){
+  
+});

@@ -63,3 +63,9 @@ a {
 th,td,h5{
 	color:black;
 }
+
+th {
+	border-bottom: 5px solid gray;
+	border-top: 5px solid gray;
+	
+}

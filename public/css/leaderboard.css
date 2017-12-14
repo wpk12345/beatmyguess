@@ -50,3 +50,13 @@ a:hover{
 .copywr{
   text-align: center;
 }
+
+th {
+	border-bottom: 5px solid gray;
+	border-top: 5px solid gray;
+	
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
