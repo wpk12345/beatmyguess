@@ -14,4 +14,3 @@ CREATE TABLE username(
 
 INSERT INTO users (username, password, win, loss, accuracy)
 VALUES ('Bill', 6, 4, 60);
-    

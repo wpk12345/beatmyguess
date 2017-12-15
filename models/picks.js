@@ -66,6 +66,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
-  console.log(Picks);
+
   return Picks;
 };
