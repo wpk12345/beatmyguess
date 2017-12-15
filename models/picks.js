@@ -1,34 +1,71 @@
 // Dependencies
 // =============================================================
 
-// Sequelize (capital) references the standard library
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references my connection to the DB.
-var sequelize = require("../config/connection.js");
+module.exports = function(sequelize, DataTypes) {
+  var Picks = sequelize.define("Picks", {
+    pickOne: {
+      type: DataTypes.STRING
+    },
+    pickTwo: {
+      type: DataTypes.STRING
+    },
+    pickThree: {
+      type: DataTypes.STRING
+    },
+    pickFour: {
+      type: DataTypes.STRING
+    },
+    pickFive: {
+      type: DataTypes.STRING
+    },
+    pickSix: {
+      type: DataTypes.STRING
+    },
+    pickSeven: {
+      type: DataTypes.STRING
+    },
+    pickEight: {
+      type: DataTypes.STRING
+    },
+    pickNine: {
+      type: DataTypes.STRING
+    },
+    pickTen: {
+      type: DataTypes.STRING
+    },
+    pickEleven: {
+      type: DataTypes.STRING
+    },
+    pickTwelve: {
+      type: DataTypes.STRING
+    },
+    pickThirteen: {
+      type: DataTypes.STRING
+    },
+    pickFourteen: {
+      type: DataTypes.STRING
+    },
+    pickFifteen: {
+      type: DataTypes.STRING
+    },
+    pickSixteen: {
+      type: DataTypes.STRING
+    },
+    //   createdAt: DataTypes.DATEONLY,
+    //   updatedAt: DataTypes.DATEONLY
+    // }, {
+    // timestamps: false
+  });
 
-// Creates a "User" model that matches up with DB
-var Picks = sequelize.define("picks", {
-  pick: {
-      type: BOOLEAN,
-      allowNull: TRUE,
-      defaultValue: false
-  },
-  createdAt: Sequelize.DATEONLY,
-  updatedAt: Sequelize.DATEONLY
-});
-
-Picks.associate = function(models) {
-     // We're saying that a Pick should belong to a User
+  Picks.associate = function(models) {
+    // We're saying that a Pick should belong to a User
     // A Pick can't be created without an User due to the foreign key constraint
     Picks.belongsTo(models.User, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
-    };
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
-// Syncs with DB
-Picks.sync();
-
-// Makes the Book Model available for other files (will also create a table)
-module.exports = Picks;
+  return Picks;
+};

@@ -79,11 +79,11 @@
                     <th>Losses</th>
                     <th>Win %</th>
                 </tr>
-                <tr>
-                    <td>(User's Name</td>
-                    <td>(User Win Count)</td>
-                    <td>(User Loss Count)</td>
-                    <td>(User Win %)</td>
+                <tr id="userData">
+                    <td id="user">(User's Name</td>
+                    <td id="wins">(User Win Count)</td>
+                    <td id="losses">(User Loss Count)</td>
+                    <td id="accuracy">(User Win %)</td>
                 </tr>
 
             </table>
@@ -93,15 +93,7 @@
                     <th>This Week's Matchups</th>
                     <th>Your Pick</th>
                 </tr>
-                <tr>
-                    <td>(Matchup 1)</td>
-                    <td>
-                        <button type="button" class="btn btn-default">Steelers</button>
-                        <span>
-                            <button type="button" class="btn btn-default">Patriots</button>
-                        </span>
-                    </td>
-                </tr>
+                
                 <tr>
                     <td>Matchup 1</td>
                     <td>
@@ -256,7 +248,8 @@
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
         <script src="js/bmg.js"></script>
-        <script src="js/game.js"></script>
+        <script src="js/addUser.js"></script>
+        <script src="js/addPicks.js"></script>
 
 </body>
 

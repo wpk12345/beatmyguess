@@ -5,8 +5,7 @@
 // Dependencies
 // =============================================================
 
-// Requiring our models
-var User = require("../models/users.js");
+var db = require("../models");
 
 // Routes
 // =============================================================
@@ -14,7 +13,7 @@ module.exports = function(app) {
 
  // Get all users
  app.get("/api/all", function(req, res) {
-  User.findAll({}).then(function(results) {
+  db.User.findAll({}).then(function(results) {
     res.json(results);
   });
 });
@@ -24,13 +23,21 @@ module.exports = function(app) {
  app.post("/api/new", function(req, res) {
   console.log("User Data:");
   console.log(req.body);
-  User.create({
+  db.User.create({
     username: req.body.username,
     password: req.body.password,
     wins: req.body.wins,
     losses: req.body.losses,
     accuracy: req.body.accuracy
   });
+//Add a pick
+app.post("/api/newPick", function(req,res){
+  console.log("Pick Data:");
+  console.log(req.body);
+  db.Picks.create({
+    pick:req.body.pick
+  })
+});
 });
 
 };

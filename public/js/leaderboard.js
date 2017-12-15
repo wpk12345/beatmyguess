@@ -14,43 +14,89 @@ $.get("/api/all", function(data) {
     // Now  we add our book data to the well we just placed on the page
     // $("#user-row-" + i).append("<tr>" + (i + 1) + ". " + data[i].username);
     $("#user-row-" + i).append("<td>" + data[i].username + "</td>");
-    $("#user-row-" + i).append("<td>" + data[i].win + "</td>");
-    $("#user-row-" + i).append("<td>" + data[i].loss + "</td>");
-    $("#user-row-" + i).append("<td>" + data[i].accuracy + "%</td>");
+    $("#user-row-" + i).append("<td>" + data[i].wins + "</td>");
+    $("#user-row-" + i).append("<td>" + data[i].losses + "</td>");
+    $("#user-row-" + i).append("<td class='accurate'>" + data[i].accuracy + "%</td>");
     $("#user-row-" + i).append("</tr>");
     
   }
 });
 
-// $("#wins-filter").on("click", function(){
-//   function sortTable(){
-//     var table,rows,switching,i,x,y, shouldSwitch;
-//     switching = true;
-//     while (switching){
-//       switching = false;
+//functions that sort the leaderboard table
 
-//       x = rows[i].getElementsByTagName("TR");
-//       for(i = 1; i < (rows.length-1); i++){
-//         x = rows[i].getElementsByTagName("TD")[0];        
-//         y = rows[i + 1].getElementsByTagName("TD")[0];
-        
-//               if (x.innerHTML > y.innerHTML){
-//                 shouldSwitch = true;
-//                 break;
-//               } 
-//       }
-//     if (shouldSwitch){
-//       rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
-//       switching = true;
-//     }
-//   }
-//   }
-// });
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("tableOne");
+  switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("tr");
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByClassName("accurate")[0];
+      y = rows[i + 1].getElementsByClassName("accurate")[0];
 
-$("#losses-filter").on("click", function(){
-  
-});
+      var xx = parseInt(x.innerHTML);
+      var yy = parseInt(y.innerHTML);
+      //check if the two rows should switch place:
+      if (xx < yy) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch= true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
 
-$("#accuracy-filter").on("click", function(){
-  
-});
+function sortLosses() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("tableOne");
+  switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("tr");
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByClassName("accurate")[0];
+      y = rows[i + 1].getElementsByClassName("accurate")[0];
+
+      var xx = parseInt(x.innerHTML);
+      var yy = parseInt(y.innerHTML);
+      //check if the two rows should switch place:
+      if (xx > yy) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch= true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+
