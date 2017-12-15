@@ -1,0 +1,612 @@
+* HTML *
+
+* GAME HTML *
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beat My Guess!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Berkshire+Swash|Bree+Serif|Dancing+Script|Dosis|Montserrat|Pacifico|Poiret+One|Satisfy|Shadows+Into+Light|Shrikhand|Slabo+27px|Spectral+SC" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/gamestyle.css">
+</head>
+
+<body>
+    <!-- This is the nav bar html before sign in -->
+    <div class="navbar-fixed">
+        <nav class="game">
+            <div class="nav-wrapper">
+                <img src="../images/bmglogo.png" class="icon-img">
+                <a href="#!" class="brand-logo">BeatMyGuess!</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class='dropdown-trigger' href='#' data-target='dropdown1'>Make A Guess</a></li>
+                    <li><a href="#">Leaderboards</a></li>
+                    <li><a href="#">Your Stats</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                </ul>
+                <ul class="sidenav" id="mobile-demo">
+                    <li><a href="#">Make A Guess</a></li>
+                    <li><a href="#">Leaderboards</a></li>
+                    <li><a href="#">Your Stats</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">Sports</a></li>
+        <li><a href="#!">Stocks</a></li>
+        <li><a href="#!">Weather</a></li>
+    </ul>
+    <!-- End Navbar -->
+    <!-- Regular page contents -->
+    <div class="container">
+        <div id="main-page-container">
+            <h1>Welcome! This is Your Dashboard.</h1>
+            <h5>Click on an icon to begin guessing!</h5>
+            <div class="row">
+                <div class="col s4">
+                    <!-- Promo Content 1 goes here -->
+                    <a href="#"><i class="large material-icons">directions_run</i></a>
+                    <div class="icon-text">
+                        <h3>Sports!</h3>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <!-- Promo Content 2 goes here -->
+                    <a href="#"><i class="large material-icons">business</i></a>
+                    <div class="icon-text">
+                        <h3>Stocks!</h3>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <!-- Promo Content 3 goes here -->
+                    <a href="#"><i class="large material-icons">filter_drama</i></a>
+                    <div class="icon-text">
+                        <h3>Weather!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Contents -->
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5>Footer Content</h5>
+                    <p class="text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a class="footer-links" href="#">Make A Guess</a></li>
+                        <li><a class="footer-links" href="#">Leaderboards</a></li>
+                        <li><a class="footer-links" href="#">Your Stats</a></li>
+                        <li><a class="footer-links" href="#">Account Settings</a></li>
+                        <li><a class="footer-links" href="#">Contact Us</a></li>
+                        <li><a class="footer-links" href="#">Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span class="copywr">© 2017 BeatMyGuess.com</span>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+    <script src="../javascript/bmg.js"></script>
+    <script src="../javascript/ajax.js"></script>
+</body>
+
+</html>
+
+*LEADERBOARD HTML*
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beat My Guess!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Berkshire+Swash|Bree+Serif|Dancing+Script|Dosis|Montserrat|Pacifico|Poiret+One|Satisfy|Shadows+Into+Light|Shrikhand|Slabo+27px|Spectral+SC" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/leaderboards.css">
+</head>
+
+<body>
+    <!-- This is the nav bar html before sign in -->
+    <div class="navbar-fixed">
+        <nav class="game">
+            <div class="nav-wrapper">
+                <img src="../images/bmglogo.png" class="icon-img">
+                <a href="#!" class="brand-logo">BeatMyGuess!</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class='dropdown-trigger' href='#' data-target='dropdown1'>Make A Guess</a></li>
+                    <li><a href="#">Leaderboards</a></li>
+                    <li><a href="/game">Your Stats</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                </ul>
+                <ul class="sidenav" id="mobile-demo">
+                    <li><a href="#">Make A Guess</a></li>
+                    <li><a href="#">Leaderboards</a></li>
+                    <li><a href="#">Your Stats</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">Sports</a></li>
+        <li><a href="#!">Stocks</a></li>
+        <li><a href="#!">Weather</a></li>
+    </ul>
+    <!-- End Navbar -->
+    <!-- Regular page contents -->
+    <div class="container">
+        <div id="main-page-container">
+            <h1>Leaderboards</h1>
+            <table class="bordered highlight">
+                <thead>
+                    <div id="table-header-menu">
+                        <div class="table-title-filter">
+                            <span>Overall</span>
+                            <!-- Dropdown Trigger -->
+                            <span><a class="dropdown-trigger" data-target="dropdown1" href="#"><i class=" material-icons">arrow_downward</i></a></span>
+                        </div>
+                        <div class="table-title-filter">
+                            <span>Filter By</span>
+                            <!-- Dropdown Trigger -->
+                            <span><a class="dropdown-trigger" data-target="dropdown2" href="#"><i class=" material-icons">arrow_downward</i></a></span>
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown2' class='dropdown-content'>
+                                <li><a href="#!">Points</a></li>
+                                <li><a href="#!">Accuracy</a></li>
+                                <li><a href="#!">Category</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Points</th>
+                        <th>Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="username">Bill</td>
+                        <td class="points">20</td>
+                        <td class="accuracy">50%</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="username">Adam</td>
+                        <td class="points">20</td>
+                        <td class="accuracy">50%</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">James</td>
+                        <td class="points">20</td>
+                        <td class="accuracy">50%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- End Page Contents -->
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5>Footer Content</h5>
+                    <p class="text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a class="footer-links" href="#">Make A Guess</a></li>
+                        <li><a class="footer-links" href="#">Leaderboards</a></li>
+                        <li><a class="footer-links" href="#">Your Stats</a></li>
+                        <li><a class="footer-links" href="#">Account Settings</a></li>
+                        <li><a class="footer-links" href="#">Contact Us</a></li>
+                        <li><a class="footer-links" href="#">Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span class="copywr">© 2017 BeatMyGuess.com</span>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+    <script src="../javascript/bmg.js"></script>
+    <script src="../javascript/ajax.js"></script>
+</body>
+
+</html>
+
+* INDEX.HTML *
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beat My Guess!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Berkshire+Swash|Bree+Serif|Dancing+Script|Dosis|Montserrat|Pacifico|Poiret+One|Satisfy|Shadows+Into+Light|Shrikhand|Slabo+27px|Spectral+SC" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <!-- This is the nav bar html before sign in -->
+    <div class="navbar-fixed">
+        <nav class="nav-center header">
+            <div class="nav-wrapper">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <!-- Modal Trigger -->
+                    <li><a data-target="modal1" class="modal-trigger">Sign Up/Sign in!</a></li>
+                    <!-- ^^ -->
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Demo</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <ul class="sidenav" id="mobile-demo">
+                    <li><a data-target="modal1" class="modal-trigger">Sign Up!</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Demo</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="container" id="ct1"></div>
+                <div class="nav-c container">
+                    <h1 id="bmg">Beat My Guess</h1>
+                    <h3>A new kind of guessing game</h3>
+                    <h5>Make guesses on Sports, Stocks, even the weather!</h5>
+                    <h5>Rack up points and get placed on the world leaderboards!</h5>
+                    <!-- buttons -->
+                    <div class="buttonz">
+                        <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light btn modal-trigger" data-target="modal1"><i class="material-icons left">cloud</i>Sign In/Sign Up</a>
+                        <!-- ^^ -->
+                        <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Play a Demo</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="text" class="validate">
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn waves-effect waves-light" type="submit" name="action"><span id="sub-muffin">Submit</span>
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+    <script src="../javascript/bmg.js"></script>
+    <script src="../javascript/ajax.js"></script>
+</body>
+
+</html>
+
+* CSS *
+
+* GAMESTYLE.CSS *
+
+/*UNIVERSAL*/
+body{
+  font-family: 'Spectral SC', serif;
+}
+/*GAME CSS*/
+/*NAV*/
+.icon-img{
+  height: 48px; 
+  width: 48px;
+  margin-top: 0.5%;
+  margin-right: 1%;
+}
+.container{
+  text-align: center;
+  color:#66fcf1;
+}
+#main-page-container{
+  color:black;
+}
+nav ul a{
+  color:#66fcf1;
+}
+nav ul a:hover{
+  color:#c5c6c7;
+}
+nav .brand-logo{
+  color:#66fcf1;
+}
+/*CONTENTS*/
+/*SELECTORS*/
+.col.s4{
+  text-align: center;
+}
+i.large{
+  font-size: 12rem;
+  color: black;
+}
+/*FOOTER*/
+.game,.page-footer{
+  background-color: #0B0C10;
+    color:#66fcf1;
+}
+a {
+  color:#66fcf1;
+}
+a:hover{
+  color:#c5c6c7;
+}
+.page-footer{
+  height: 45vh;
+  margin-top: 10%;
+}
+.copywr{
+  text-align: center;
+}
+
+* Leaderboards.css * 
+
+/*UNIVERSAL*/
+body{
+  font-family: 'Spectral SC', serif;
+}
+/*NAV*/
+.icon-img{
+  height: 48px; 
+  width: 48px;
+  margin-top: 0.5%;
+  margin-right: 1%;
+}
+.container{
+  text-align: center;
+  color:#66fcf1;
+}
+nav ul a{
+  color:#66fcf1;
+}
+nav ul a:hover{
+  color:#c5c6c7;
+}
+nav .brand-logo{
+  color:#66fcf1;
+}
+/*MAIN*/
+#main-page-container{
+  color:black;
+}
+/*TABLES*/
+#table-header-menu{
+      display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*FOOTER*/
+.game,.page-footer{
+  background-color: #0B0C10;
+    color:#66fcf1;
+}
+a {
+  color:#66fcf1;
+}
+a:hover{
+  color:#c5c6c7;
+}
+.page-footer{
+  height: 45vh;
+  margin-top: 10%;
+}
+.copywr{
+  text-align: center;
+}
+
+* reset.css * 
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* style.css*
+
+
+/*MODAL*/
+.modal .modal-footer{
+  text-align: center;
+}
+body{
+  font-family: 'Spectral SC', serif;
+}
+/*MENU CSS*/
+.header{
+  background-image: url("../images/bmg11.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Spectral SC', serif;
+  /*font-family: 'Montserrat', sans-serif;
+  font-family: 'Slabo 27px', serif;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Bree Serif', serif;
+  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Acme', sans-serif;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Poiret One', cursive;
+  font-family: 'Shrikhand', cursive;
+  font-family: 'Satisfy', cursive;*/
+}
+nav.nav-center ul {
+    text-align: center;
+/*    color: #66fcf1;*/
+}
+nav.nav-center ul li {
+    display: inline;
+    float: none;
+}
+nav.nav-center ul li a {
+    display: inline-block;
+    color: #66fcf1;
+
+}
+nav ul a:hover{
+  color:#c5c6c7 !important;
+}
+.right{
+  float: none !important;
+}
+#bmg{
+  text-align: center;
+  margin-top: 0px;
+  font-size: 7.0rem;
+}
+.nav-c.container{
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+  color:#66fcf1;
+}
+.material-icons.left{
+  line-height: 36px;
+}
+.btn, .btn-large{
+  background-color: #0B0C10;
+  color: #66fcf1;
+  text-shadow: 0px 0px #000000;
+}
+.btn:hover, .btn-large:hover{
+  background-color: #0B0C10;
+}
+#sub-muffin{
+  
+}
+#ct1{
+  height: 10vh;
+}

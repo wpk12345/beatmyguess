@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beat My Guess!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Berkshire+Swash|Bree+Serif|Dancing+Script|Dosis|Montserrat|Pacifico|Poiret+One|Satisfy|Shadows+Into+Light|Shrikhand|Slabo+27px|Spectral+SC"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/leaderboard.css">
+</head>
+
+<body>
+    <!-- This is the nav bar html before sign in -->
+    <div class="navbar-fixed">
+        <nav class="game">
+            <div class="nav-wrapper">
+                <img src="images/bmglogo.png" class="icon-img">
+                <a href="#!" class="brand-logo">BeatMyGuess!</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/dashboard">Dashboard</a>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class='dropdown-trigger' href='http://www.espn.com/nfl/picks' data-target='dropdown1'>Expert's Picks</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Sign Out</a>
+                    </li>
+                </ul>
+                <ul class="sidenav" id="mobile-demo">
+                    <li>
+                        <a href="http://www.espn.com/nfl/picks">Expert's Picks</a>
+                    </li>
+                    <li>
+                        <a href="/dashboard">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#">Account Settings</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li>
+            <a href="/game.html">Sports</a>
+        </li>
+        <li>
+            <a href="commingsoon.html">Stocks</a>
+        </li>
+        <li>
+            <a href="commingsoon.html">Weather</a>
+        </li>
+    </ul>
+
+    <!-- End Navbar -->
+    <!-- Regular page contents -->
+    <div class="container">
+        <div id="main-page-container">
+            <h1>Leaderboards</h1>
+            <table id="tableOne" class="bordered highlight">
+                <thead>
+                    <div id="table-header-menu">
+                        <div class="table-title-filter">
+                            <span>Overall</span>
+                            <!-- Dropdown Trigger -->
+                            <span>
+                                <a class="dropdown-trigger" data-target="dropdown1" href="#">
+                                    <i class=" material-icons">arrow_downward</i>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="table-title-filter">
+                            <span>Filter By</span>
+                            <!-- Dropdown Trigger -->
+                            <span>
+                                <a class="dropdown-trigger" data-target="dropdown2" href="#">
+                                    <i class=" material-icons">arrow_downward</i>
+                                </a>
+                            </span>
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown2' class='dropdown-content'>
+                                <li id="wins-filter1">
+                                    <a id="wins-filter" onclick="sortTable()" href="#!">Wins</a>
+                                </li>
+                                <li>
+                                    <a id="losses-filter" onclick="sortLosses()" href="#!">Losses</a>
+                                </li>
+                                <li>
+                                    <a id="accuracy-filter" onclick="sortTable()" href="#!">Win %</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win %</th>
+                    </tr>
+                </thead>
+                <tbody id="userHub" class="table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+                    <div id="main-page-container">
+                      <h1>Leaderboard</h1>
+                
+                      <table id="tableOne">
+                          <thead>
+                        <tr>
+                          <th>User Name</th>
+                          <th>Wins</th>
+                          <th>Losses</th>
+                          <th>Win %</th>
+                        </tr>
+                        </thead>
+                        <tbody id="userHub">
+
+
+                        </tbody>
+                       
+                      </table> -->
+
+
+
+
+    <!-- End Page Contents -->
+
+    <!-- END FOOTER -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+    <script src="js/bmg.js"></script>
+    <script src="js/leaderboard.js"></script>
+</body>
+
+</html>
