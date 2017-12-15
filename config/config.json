@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": "Developer2018",
+    "username": "james",
+    "password": "password",
     "database": "beatmyguess_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
