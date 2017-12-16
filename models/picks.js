@@ -50,12 +50,13 @@ module.exports = function(sequelize, DataTypes) {
     },
     pickSixteen: {
       type: DataTypes.STRING
-    },
+    }
     //   createdAt: DataTypes.DATEONLY,
     //   updatedAt: DataTypes.DATEONLY
     // }, {
     // timestamps: false
   });
+
 
   Picks.associate = function(models) {
     // We're saying that a Pick should belong to a User
@@ -66,6 +67,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
-
+  console.log(Picks);
   return Picks;
 };
