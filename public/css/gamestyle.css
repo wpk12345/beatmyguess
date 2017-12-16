@@ -69,3 +69,18 @@ th {
 	border-top: 5px solid gray;
 	
 }
+
+img {
+    max-width: 100%;
+    width: auto\9;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+table {
+	display: table;
+	border-color: darkslategray;
+	border-bottom: 5px;
+}
