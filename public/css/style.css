@@ -52,6 +52,17 @@ nav ul a:hover{
 	margin-top: 0px;
 	font-size: 7.0rem;
 }
+@media only screen and (min-device-width: 300px){
+    #bmg{
+      font-size: 5.0rem;
+    }
+  }
+@media only screen and (min-device-width: 768px){
+    #bmg{
+      font-size: 7.0rem;
+    }
+  }
+
 .nav-c.container{
 	text-align: center;
 	text-shadow: 2px 2px #000000;
@@ -67,9 +78,6 @@ nav ul a:hover{
 }
 .btn:hover, .btn-large:hover{
 	background-color: #0B0C10;
-}
-#sub-muffin{
-	
 }
 #ct1{
 	height: 10vh;
